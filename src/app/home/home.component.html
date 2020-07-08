@@ -1,0 +1,53 @@
+<div id="homeContainer">
+    <div class="whiteBorderGlassBox">
+        <div class="homeHeadContainer">
+            <div class="row">
+                <div class="col-md-auto">
+                    <div class="avatarFrameonline">
+                        <img id="homeAvatarPicture" src="assets/img/generic_avatar.png" alt="avatar_generic">
+                    </div>
+                </div>
+                <div class="col">
+                    <b>Victor</b>
+                    <div>
+                        <span>Online</span>
+                        <br />
+                        <span>< Escribe un mensaje perosnal ></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="whiteContainerPadded mgtop15">
+        <div class="row">
+            <div class="col">
+                <!-- ngModel detecta los cambios de dos vias y lo actualiza, tomando como variable query  -->
+                <input class="form-control" type="text" placeholder="Buscar Amigo" [(ngModel)]="query" />
+            </div>
+            <div class="col-md-auto">
+                <img class="icon" src="assets/img/logo_live_add.png" alt="addFriend">
+            </div>
+        </div>
+        <!-- *ngFor afecta o modifica un documento html (esta en particular) es una directiva estructural y se identifican porque inician con un asterisco  -->
+        <!-- decalramos let user que es una variable y por cada uno de estos le va asignar el valor que le sigue   -->
+        <!-- por cada ngFor genera un index y asi nadamas le asignamos una variable i  -->
+        <hr>
+        <b>Amigos ({{friends.length}}/{{friends.length}})</b>
+        <div *ngFor="let user of friends | search: query; let i = index" class="dpBk mgbot5">
+            <!-- <div *ngIf="user.friend" lo quitamos de abajo > -->
+            <span routerLink="/conversation/{{user.uid}}">
+            <img src="assets/img/logo_live_online.png" class="icon">
+            <b>{{user.nick}}</b> - {{user.subnick || 'No subnick'}}
+            <small>{{user.email}}</small>
+            <!-- agregamos la imagen {{}}.png para que cambie segun su estado -->
+            <!-- modificamso su ancho en home.comounent.css -->
+            <!-- <img class="statusIcon" src="assets/img/logo_live_{{user.status}}.png" alt="status"> -->
+            <!-- <img class="statusIcon" src="../../assets/img/logo_live_{{user.status}}.png" alt="status"> -->
+            <!-- <a routerLink="/conversation/{{user.uid}}"> -->
+              <!-- {{i}}. {{user.nick}} - {{user.email}} -->
+            <!-- </a> -->
+          </span>
+
+        </div>
+    </div>
+</div>

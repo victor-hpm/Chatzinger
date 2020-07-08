@@ -1,0 +1,29 @@
+#conversationContainer {
+    background-image: url(/assets/img/msnbg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.chatContainer {
+    border: 1px solid white;
+    width: 100%;
+    height: 335px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.msjChat {
+    margin: 10px;
+}
+
+.form-control {
+    height: 100px;
+}
+
+.iconImage {
+    width: 30px;
+}
+
+.btnEnviar {
+    margin-right: px;
+}

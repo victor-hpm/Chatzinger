@@ -1,0 +1,67 @@
+<div id="conversationContainer">
+    <div class="container mgtop45">
+        <div class="row">
+            <div class="col-md-3 mgleft45">
+                <div class="avatarFrameonline mgtop45">
+                    <img src="assets/img/generic_avatar.png" class="avatarImage img-fluid">
+                </div>
+                <div class="avatarFrameonline mgtop200">
+                    <img src="assets/img/generic_avatar.png" class="avatarImage img-fluid">
+                </div>
+            </div>
+            <div class="col">
+                <div class="mgtop45">
+                    <span><b>{{friend.nick}} ({{friend.status}})</b></span>
+                    <div class="container">
+                        <div class="chatContainer mgtop15">
+                            <div class="msjChat">
+                                <span><b>{{friend.nick}} dice:</b></span><br>
+                                <p class="badge badge-primary">Hola ¿Como estas?</p>
+                            </div>
+                            <div class="msjChat text-right">
+                                <span><b>Victor dice:</b></span><br>
+                                <p class="badge badge-secondary">Hola muy bien, ¿Tu como estas?</p>
+                            </div>
+                            <div class="msjChat">
+                                <span><b>{{friend.nick}} dice:</b></span><br>
+                                <p class="badge badge-primary">bien gracias</p>
+                            </div>
+                        </div>
+                        <div class="msjContainer">
+                            <input type="text" class="form-control" placeholder="Ingresa un Mensaje...">
+                            <div class="">
+                                <img src="../../assets/img/zumbido.png" class="iconImage img-fluid">
+                                <label class="custom-file-upload">
+                                  <input type="file">
+                                  <i class="far fa-images">Seleccionar Imagen</i>
+                                </label>
+                                <div class="btnEnviar">
+                                    <button type="button" class="btn btn-primary">Enviar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- pipe de angular {{loque queremos poner espacio pipe| espacio jason}} -->
+<!-- <p>{{friend | json}}</p> -->
+
+<!-- <p>{{price | number: '1.2-2'}}</p> '1.2-2 la cifra antes del punto dejala igual y despues del punto minimo2 maxicmo2' -->
+<!-- <p>{{price | number: '1.2-2'}}</p> -->
+
+
+<!-- <p>{{today | date: 'medium'}}</p> pipe de formato de fecha de muchos numero a fecha en formato , el medium nos da la hora -->
+<!-- <p>{{today | date: 'medium'}}</p> -->
+
+<!-- toda la info de los pipe esta en date pipe angular -->
